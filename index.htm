@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>CORONAVIRUS CASES</title>
+    <title>CORONAVIRUS DEATHS</title>
       <script src="https://d3js.org/d3.v5.min.js"></script>
       <script src="https://d3js.org/topojson.v2.min.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Oswald&display=swap" rel="stylesheet">
@@ -53,7 +53,7 @@
   </head>
   <body>
   
-    <h2>CORONAVIRUS CASES BY STATE</h2>
+    <h2>CORONAVIRUS DEATHS BY STATE</h2>
     <svg id="usmap" height="380" width="600" ></svg>
     <svg id="colorLegend" height="60" width="600" ></svg>
     <p id = "date"></p>
@@ -155,7 +155,7 @@
           countyData_date_month = Number(countyData_date.substring(5,7));
           countyData_full_date = [countyData_date_day, countyData_date_month];
           if (countyData_full_date[0] == data_full_date[0] && countyData_full_date[1] == data_full_date[1]) {
-            coronaCounts[i]['count'] = coronaCounts[i]['count'] + Number(countyData[j]['cases']);
+            coronaCounts[i]['count'] = coronaCounts[i]['count'] + Number(countyData[j]['deaths']);
           }
         }
       }
